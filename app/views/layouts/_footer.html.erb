@@ -1,0 +1,76 @@
+<footer>
+  <div class="content">
+    <div class="commonrow">
+      <%= link_to image_tag("/assets/logo_handycraft.png", :id => "logo"), '/' %>
+      <ul class="list-paymenttype">
+        <li class="icon-paypal"><%= link_to "Paypal", "" %></li>
+        <li class="icon-americanexp"><%= link_to "American Express", "" %></li>
+        <li class="icon-discover"><%= link_to "Discover", "" %></li>
+        <li class="icon-mastercard"><%= link_to "Master Card", "" %></li>
+        <li class="icon-visa"><%= link_to "Visa", "" %></li>
+      </ul>
+    </div>
+    <div class="commonrow">
+      <div class="aboutusBox">
+        <h2><span>About Us</span></h2>
+        <p>Handycraftstudios is a marketplace to "Discover Unique Hand crafted Products" including Handmade, Vintage, Ethnic, Organic,IT and Natural products. 
+<br><br>
+handycraft is a beautiful assortment of diversity reflected in our Clothing, Food, Lifestyle, Language, Music, Books and other online digital art, etc. This diversity is so rich and diverse that an attempt to capture it on a single platform was never made. Handycraftstudios is that sincere attempt by bunch of young insane guys and girls who think this is possible now with the Internet. These are the modern internet entrepreneurs.
+<br><br>
+Handycraftstudios uses a marketplace model to capture the regional variations of these entrepreneurs . We connect local artisans & designers directly to global customers and thereby increase their livelihood, remove middlemen, help them create/promote their brand and thereby preserve our culture, traditions and values. We believe this journey will not only help artisans but also help customers discover and buy products which they otherwise are not able to do today.
+<br><br>
+Experience the exquisite craftsmanship from the new age of entrepreneurs. We sincerly hope for all our customers to have an amazing experience with our super fast deliveries and policies which are very much customer oriented. 
+  </p>
+      </div>
+    </div>
+    <div class="commonrow">
+      <ul class="list-media-footer">
+        <%= render 'layouts/social' %>
+      </ul>
+    </div>
+    <div class="menu-footer">
+      <ul>
+        <li>
+          <h4>Information</h4>
+          <ul>
+            <li><%= link_to "About Us", about_us_path %></li>
+            <li><%= link_to "Delivery and shipping policy", delivary_information_path %></li>
+            <li><%= link_to "Privacy policy", privacy_policy_path %></li>
+            <li><%= link_to "Terms and condition", terms_conditions_path %></li>
+            <li><%= link_to "Legal Disclaimer", legal_disclaimer_path %></li>
+          </ul>
+        </li>
+        <li>
+          <h4>Customer Services</h4>
+          <ul>
+            <li><%= link_to "Contact Us", new_contact_path %></li>
+            <li><%= link_to " Refund and cancellation", cancel_refund_policy_path %></li>
+            <li><%= link_to "Secure Shopping", secure_shopping_path %></li>
+          </ul>
+        </li>
+<!--         <li>
+          <h4>Non-Profits</h4>
+          <ul>
+            <li><%= link_to "Non-Profit Login", new_user_session_path() %></li>
+            <li><%= link_to "Non-Profit Sign Up", new_user_path(:role => 'non-profit') %></li>
+            <li><%= link_to "How it Works", how_it_works_path %></li>
+            <li><%= link_to "Non-Profit FAQs", faqs_path %></li>
+          </ul>
+        </li> -->
+        <li>
+          <h4>My Account</h4>
+          <ul>
+            <li><%#= link_to "My Account", "" %></li>
+            <li><%= link_to "Order History", order_history_path %></li>
+            <li><%#= link_to "Wishlist", "" %></li>
+            <li><%#= link_to "Newsletter", "" %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="copyright">
+      Copyright © 2015 HandyCraftStudios. All rights reserved.
+    </div>
+    <div class="clearFix"></div>
+  </div>
+</footer>
