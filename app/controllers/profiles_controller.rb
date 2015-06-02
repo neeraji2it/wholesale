@@ -8,18 +8,24 @@ class ProfilesController < ApplicationController
 
   def profile_update
     @user = User.find(params[:id])
-    @user.first_name = params[:user][:first_name]
-    @user.last_name = params[:user][:last_name]
-    @user.gender = params[:user][:gender]
-    @user.city = params[:user][:city]
-    @user.country = params[:user][:country]
-    @user.zip = params[:user][:zip]
-    @user.avatar = params[:user][:avatar]
-    @user.email = params[:user][:email]
-    @user.phone = params[:user][:phone]
-    @user.date_of_birth = params[:user][:date_of_birth]
-
-    if @user.save
+    # @user.first_name = params[:user][:first_name]
+    # @user.last_name = params[:user][:last_name]
+    # @user.gender = params[:user][:gender]
+    # @user.city = params[:user][:city]
+    # @user.country = params[:user][:country]
+    # @user.zip = params[:user][:zip]
+    # @user.avatar = params[:user][:avatar]
+    # @user.email = params[:user][:email]
+    # @user.phone = params[:user][:phone]
+    # @user.date_of_birth = params[:user][:date_of_birth]
+    # @user.business_name = params[:user][:business_name]
+    # @user.website_url = params[:user][:website_url]
+    # @user.business_address = params[:user][:business_address]
+    # @user.store_image = params[:user][:store_image]
+    # @user.paypal_id = params[:user][:paypal_id]
+    # @user.other_info = params[:user][:other_info]
+    
+    if @user.update_attributes(params[:user])
       flash[:success] = "Successfully updated your profile."
       redirect_to profile_profile_path(@user)
     else
@@ -27,7 +33,6 @@ class ProfilesController < ApplicationController
       render :action => 'profile'
     end
   end
-
   def change_password
     @user = current_user
     @user.errors.add(:password, "is required") if params[:user].nil? or params[:user][:password].to_s.blank?

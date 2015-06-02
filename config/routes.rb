@@ -1,4 +1,7 @@
 ICS::Application.routes.draw do
+  
+
+
   devise_for :users, :controllers => {:sessions => 'sessions'}
 
 
@@ -99,6 +102,7 @@ ICS::Application.routes.draw do
   end
 
   resources :contacts 
+  resources :contact_prices
   
   match '/auth/:provider/callback' => 'omniauths#create'
   get '/favourites' => 'products#favourites', :as => :favourites

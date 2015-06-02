@@ -1,0 +1,26 @@
+        <h1 class="icon-profile"><span>Contacts</span></h1>
+<div class="tablebox table-categoryManagement">
+  <div class="row">
+    <div class="column">Name</div>
+    <div class="column">Email</div>
+    <div class="column">Quantity</div>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</div>
+<% @contact_prices.each do |contact_price| %>
+  <div class="row">
+      <div class="column"><%= contact_price.name.capitalize %></div>
+      <div class="column"><%= contact_price.email %></div>
+      <div class="column"><%= contact_price.qty %></div>
+    <td><%#= link_to 'Show', contact_price %></td>
+    <td><%#= link_to 'Edit', edit_contact_price_path(contact_price) %></td>
+    <td><%#= link_to 'Destroy', contact_price, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</div>
+<% end %>
+</table>
+</div>
+<br />
+
+<%#= link_to 'New Contact price', new_contact_price_path %>
