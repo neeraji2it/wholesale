@@ -9,7 +9,7 @@ role (:app) {"#{domain}"}
 role (:db) { ["#{domain}", {:primary => true}] }
 
 # Set the deploy branch to the current branch
-set :application, "anchodemarca"
+set :application, "sunshine"
 set :scm, :git
 set (:repository) { "#{gitrepo}" }
 set (:deploy_to) { "#{deploydir}" }
