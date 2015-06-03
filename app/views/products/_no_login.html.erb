@@ -52,7 +52,7 @@
           </ul>
         </div>
         <p><%= @product.description %></p>
-        <button><%= link_to "Ask For Price",new_contact_price_path %></button>
+        <button><%= link_to "Ask For Price",new_contact_price_path(:id => @product.id) %></button>
       </div>
     </div>
     <div id="reviews">
