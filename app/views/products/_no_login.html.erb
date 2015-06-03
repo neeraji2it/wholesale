@@ -52,7 +52,9 @@
           </ul>
         </div>
         <p><%= @product.description %></p>
-        <%= link_to "Ask For Price",new_contact_price_path(:id => @product.id) %>
+
+        <%= link_to "<input type='submit' title='Ask For Price' value='Ask For Price' />".html_safe, new_contact_price_path(:id => @product.id), :style => 'text-decoration: none;' %>
+
       </div>
     </div>
     <div id="reviews">
