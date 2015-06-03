@@ -11,8 +11,8 @@
   <% for line_item in @user_products %>
     <div class="row">
       <div class="column"><%= image_tag(line_item.product.images.first.image.url(:original), :width => '50', :height => '50', :id => "image_#{line_item.id}", :style => 'cursor: pointer;') %></div>
-      <div class="column"><%= number_to_currency(line_item.full_price) %></div>
-      <div class="column"><%= number_to_currency(line_item.full_price) %></div>
+      <div class="column">Ask For Price<%#= number_to_currency(line_item.full_price) %></div>
+      <div class="column">Ask For Price<%#= number_to_currency(line_item.full_price) %></div>
       <div class="column"><%= line_item.quantity %></div>
       <div class="column">
         <%= link_to "Proceed to Checkout", line_item_orders_path(line_item.id), :method => 'POST', :style => 'text-align: center;' %>

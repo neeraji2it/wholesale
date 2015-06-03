@@ -19,7 +19,7 @@ if Category.count == 0
   Category.create(:name => "Health & Beauty")
   Category.create(:name => 'Kitchen & Dining')
   Category.create(:name => 'Lawn & Garden')
- 
+
 
   @cat1 = Category.where(:name => "Home & Garden Decor").first
   #Jewellery
@@ -31,7 +31,6 @@ if Category.count == 0
   
   SubCategory.create(:name => 'Candle Holders', :category_id => @cat1.id)
   @subcat3=SubCategory.where(:name => 'Candle Holders').first
-
 
   SubCategory.create(:name => 'Candles', :category_id => @cat1.id)
   @subcat4=SubCategory.where(:name => 'Candles').first
@@ -71,7 +70,7 @@ if Category.count == 0
 
 
 
- @cat2 = Category.where(:name => "Themes").first
+  @cat2 = Category.where(:name => "Themes").first
   #Clothing
   SubCategory.create(:name => 'Animal Decor', :category_id => @cat2.id)
   @subcat15=SubCategory.where(:name => 'Animal Decor').first
@@ -82,57 +81,50 @@ if Category.count == 0
   SubCategory.create(:name => 'Birds', :category_id => @cat2.id)
   @subcat17=SubCategory.where(:name => 'Birds').first
 
-  SubCategory.create(:name => 'Birds', :category_id => @cat2.id)
-  @subcat18=SubCategory.where(:name => 'Birds').first
+  SubCategory.create(:name => 'Butterflies', :category_id => @cat2.id)
+  @subcat18=SubCategory.where(:name => 'Butterflies').first
 
-SubCategory.create(:name => 'Butterflies', :category_id => @cat2.id)
-  @subcat19=SubCategory.where(:name => 'Butterflies').first
+  SubCategory.create(:name => 'Cats', :category_id => @cat2.id)
+  @subcat19=SubCategory.where(:name => 'Cats').first
 
-SubCategory.create(:name => 'Cats', :category_id => @cat2.id)
-  @subcat20=SubCategory.where(:name => 'Cats').first
+  SubCategory.create(:name => 'Dogs', :category_id => @cat2.id)
+  @subcat20=SubCategory.where(:name => 'Dogs').first
 
-SubCategory.create(:name => 'Dogs', :category_id => @cat2.id)
-  @subcat21=SubCategory.where(:name => 'Dogs').first
+  SubCategory.create(:name => 'Dolphins', :category_id => @cat2.id)
+  @subcat21=SubCategory.where(:name => 'Dolphins').first
 
-SubCategory.create(:name => 'Birds', :category_id => @cat2.id)
-  @subcat22=SubCategory.where(:name => 'Birds').first
+  SubCategory.create(:name => 'Eagles', :category_id => @cat2.id)
+  @subcat22=SubCategory.where(:name => 'Eagles').first
 
-SubCategory.create(:name => 'Dolphins', :category_id => @cat2.id)
-  @subcat23=SubCategory.where(:name => 'Dolphins').first
+  SubCategory.create(:name => 'Elephants', :category_id => @cat2.id)
+  @subcat23=SubCategory.where(:name => 'Elephants').first
 
-SubCategory.create(:name => 'Eagles', :category_id => @cat2.id)
-  @subcat24=SubCategory.where(:name => 'Eagles').first
+  SubCategory.create(:name => 'Fish', :category_id => @cat2.id)
+  @subcat24=SubCategory.where(:name => 'Fish').first
 
+  SubCategory.create(:name => 'Flamingos', :category_id => @cat2.id)
+  @subcat25=SubCategory.where(:name => 'Flamingos').first
 
-SubCategory.create(:name => 'Elephants', :category_id => @cat2.id)
-  @subcat25=SubCategory.where(:name => 'Elephants').first
+  SubCategory.create(:name => 'Frogs', :category_id => @cat2.id)
+  @subcat26=SubCategory.where(:name => 'Frogs').first
 
-SubCategory.create(:name => 'Fish', :category_id => @cat2.id)
-  @subcat26=SubCategory.where(:name => 'Fish').first
+  SubCategory.create(:name => 'Giraffes', :category_id => @cat2.id)
+  @subcat27=SubCategory.where(:name => 'Giraffes').first
 
-SubCategory.create(:name => 'Flamingos', :category_id => @cat2.id)
-  @subcat27=SubCategory.where(:name => 'Flamingos').first
+  SubCategory.create(:name => 'Horses', :category_id => @cat2.id)
+  @subcat28=SubCategory.where(:name => 'Horses').first
 
-SubCategory.create(:name => 'Frogs', :category_id => @cat2.id)
-  @subcat28=SubCategory.where(:name => 'Frogs').first
+  SubCategory.create(:name => 'Hummingbirds', :category_id => @cat2.id)
+  @subcat29=SubCategory.where(:name => 'Hummingbirds').first
 
-SubCategory.create(:name => 'Giraffes', :category_id => @cat2.id)
-  @subcat29=SubCategory.where(:name => 'Giraffes').first
+  SubCategory.create(:name => 'Ladybugs', :category_id => @cat2.id)
+  @subcat30=SubCategory.where(:name => 'Ladybugs').first
 
-SubCategory.create(:name => 'Horses', :category_id => @cat2.id)
-  @subcat30=SubCategory.where(:name => 'Horses').first
+  SubCategory.create(:name => 'Lions', :category_id => @cat2.id)
+  @subcat31=SubCategory.where(:name => 'Lions').first
 
-SubCategory.create(:name => 'Hummingbirds', :category_id => @cat2.id)
-  @subcat31=SubCategory.where(:name => 'Hummingbirds').first
-
-SubCategory.create(:name => 'Ladybugs', :category_id => @cat2.id)
-  @subcat32=SubCategory.where(:name => 'Ladybugs').first
-
-SubCategory.create(:name => 'Lions', :category_id => @cat2.id)
-  @subcat33=SubCategory.where(:name => 'Lions').first
-
-SubCategory.create(:name => 'Monkeys', :category_id => @cat2.id)
-  @subcat34=SubCategory.where(:name => 'Monkeys').first
+  SubCategory.create(:name => 'Monkeys', :category_id => @cat2.id)
+  @subcat32=SubCategory.where(:name => 'Monkeys').first
 
 
 
@@ -140,47 +132,47 @@ SubCategory.create(:name => 'Monkeys', :category_id => @cat2.id)
   @cat3 = Category.where(:name => "Furniture").first
   #Home Alliance
   SubCategory.create(:name => 'Benches', :category_id => @cat3.id)
-  @subcat35=SubCategory.where(:name => 'Benches').first
+  @subcat33=SubCategory.where(:name => 'Benches').first
 
   SubCategory.create(:name => 'Cabinets', :category_id => @cat3.id)
-  @subcat36=SubCategory.where(:name => 'Cabinets').first
+  @subcat34=SubCategory.where(:name => 'Cabinets').first
 
   SubCategory.create(:name => 'Chairs', :category_id => @cat3.id)
-  @subcat37=SubCategory.where(:name => 'Chairs').first
+  @subcat35=SubCategory.where(:name => 'Chairs').first
   
   SubCategory.create(:name => 'Ottomans', :category_id => @cat3.id)
-  @subcat38=SubCategory.where(:name => 'Ottomans').first
+  @subcat36=SubCategory.where(:name => 'Ottomans').first
 
   SubCategory.create(:name => 'Shelving', :category_id => @cat3.id)
-  @subcat39=SubCategory.where(:name => 'Shelving').first
+  @subcat37=SubCategory.where(:name => 'Shelving').first
 
   SubCategory.create(:name => 'Stools', :category_id => @cat3.id)
-  @subcat40=SubCategory.where(:name => 'Stools').first
+  @subcat38=SubCategory.where(:name => 'Stools').first
 
   SubCategory.create(:name => 'Tables', :category_id => @cat3.id)
-  @subcat41=SubCategory.where(:name => 'Tables').first
+  @subcat39=SubCategory.where(:name => 'Tables').first
 
   SubCategory.create(:name => 'Accent Tables', :category_id => @cat3.id)
-  @subcat42=SubCategory.where(:name => 'Accent Tables').first
+  @subcat40=SubCategory.where(:name => 'Accent Tables').first
 
 
 
 
 
 
- @cat4 = Category.where(:name => "Health & Beauty").first
+  @cat4 = Category.where(:name => "Health & Beauty").first
   #Home Alliance
   SubCategory.create(:name => 'Jewelry Holders', :category_id => @cat4.id)
-  @subcat43=SubCategory.where(:name => 'Jewelry Holders').first
+  @subcat41=SubCategory.where(:name => 'Jewelry Holders').first
 
   SubCategory.create(:name => 'Jewelry Boxes', :category_id => @cat4.id)
-  @subcat44=SubCategory.where(:name => 'Jewelry Boxes').first
+  @subcat42=SubCategory.where(:name => 'Jewelry Boxes').first
 
   SubCategory.create(:name => 'Personal Care', :category_id => @cat4.id)
-  @subcat45=SubCategory.where(:name => 'Personal Care').first
+  @subcat43=SubCategory.where(:name => 'Personal Care').first
   
   SubCategory.create(:name => 'Bath Sets', :category_id => @cat4.id)
-  @subcat46=SubCategory.where(:name => 'Bath Sets').first
+  @subcat44=SubCategory.where(:name => 'Bath Sets').first
 
 
 
@@ -189,34 +181,34 @@ SubCategory.create(:name => 'Monkeys', :category_id => @cat2.id)
   @cat5 = Category.where(:name => "Kitchen & Dining").first
   #Accessories
   SubCategory.create(:name => 'Barware', :category_id => @cat5.id)
-  @subcat47=SubCategory.where(:name => 'Barware').first
+  @subcat45=SubCategory.where(:name => 'Barware').first
   
   SubCategory.create(:name => 'Wine Bottle Holders', :category_id => @cat5.id)
-  @subcat48=SubCategory.where(:name => 'Wine Bottle Holders').first
+  @subcat46=SubCategory.where(:name => 'Wine Bottle Holders').first
   
   SubCategory.create(:name => 'Cookware', :category_id => @cat5.id)
-  @subcat49=SubCategory.where(:name => 'Cookware').first
+  @subcat47=SubCategory.where(:name => 'Cookware').first
 
- SubCategory.create(:name => 'Pizza Baking Stone', :category_id => @cat5.id)
-  @subcat50=SubCategory.where(:name => 'Pizza Baking Stone').first
+  SubCategory.create(:name => 'Pizza Baking Stone', :category_id => @cat5.id)
+  @subcat48=SubCategory.where(:name => 'Pizza Baking Stone').first
 
-   SubCategory.create(:name => 'Tableware', :category_id => @cat5.id)
-  @subcat51=SubCategory.where(:name => 'Tableware').first
+  SubCategory.create(:name => 'Tableware', :category_id => @cat5.id)
+  @subcat49=SubCategory.where(:name => 'Tableware').first
 
   SubCategory.create(:name => 'Salt & Pepper Shakers', :category_id => @cat5.id)
-  @subcat52=SubCategory.where(:name => 'Salt & Pepper Shakers').first
+  @subcat50=SubCategory.where(:name => 'Salt & Pepper Shakers').first
 
   SubCategory.create(:name => 'Mugs', :category_id => @cat5.id)
-  @subcat53=SubCategory.where(:name => 'Mugs').first
+  @subcat51=SubCategory.where(:name => 'Mugs').first
 
   SubCategory.create(:name => 'Storage Containers', :category_id => @cat5.id)
-  @subcat54=SubCategory.where(:name => 'Storage Containers').first
+  @subcat52=SubCategory.where(:name => 'Storage Containers').first
 
   SubCategory.create(:name => 'Kitchen Accessories', :category_id => @cat5.id)
-  @subcat55=SubCategory.where(:name => 'Kitchen Accessories').first
+  @subcat53=SubCategory.where(:name => 'Kitchen Accessories').first
 
   SubCategory.create(:name => 'Kitchen Decor', :category_id => @cat5.id)
-  @subcat56=SubCategory.where(:name => 'Kitchen Decor').first
+  @subcat54=SubCategory.where(:name => 'Kitchen Decor').first
 
 
 
@@ -224,13 +216,13 @@ SubCategory.create(:name => 'Monkeys', :category_id => @cat2.id)
   @cat6 = Category.where(:name => "Lawn & Garden").first
   #Accessories
   SubCategory.create(:name => 'Gardening', :category_id => @cat6.id)
-  @subcat57=SubCategory.where(:name => 'Gardening').first
+  @subcat55=SubCategory.where(:name => 'Gardening').first
   
   SubCategory.create(:name => 'Outdoor Living', :category_id => @cat6.id)
-  @subcat58=SubCategory.where(:name => 'Outdoor Living').first
+  @subcat56=SubCategory.where(:name => 'Outdoor Living').first
   
   SubCategory.create(:name => 'Hammocks', :category_id => @cat6.id)
-  @subcat59=SubCategory.where(:name => 'Hammocks').first
+  @subcat57=SubCategory.where(:name => 'Hammocks').first
 
   
 end

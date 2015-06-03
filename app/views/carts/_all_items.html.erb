@@ -22,7 +22,7 @@
             <li>
               <div class="row-checkout">
                 <div>Item total</div>
-                <div><%= number_to_currency(line_item.full_price) %> USD</div>
+                <div><%#= number_to_currency(line_item.full_price) %> Ask For Price</div>
               </div>
             </li>
             <% if line_item.product.colors.present? %>
@@ -65,7 +65,7 @@
             <li>
               <div class="row-checkout bold">
                 <div>Order total</div>
-                <div><%= number_to_currency(line_item.full_price) %> USD</div>
+                <div><%#= number_to_currency(line_item.full_price) %> Ask For Price</div>
               </div>
               <%= submit_tag "Proceed to Checkout", :id => "sub_#{line_item.id}" %>
             </li>
@@ -107,7 +107,12 @@
               </em>
               <span id='line_item_quantiy_<%= line_item.id %>'></span>
             </li>
-            <li><%= number_to_currency(line_item.product.price) %> USD </li>
+            <li><%#= number_to_currency(line_item.product.price) %> Ask For Price </li>
+
+
+
+
+            
             <!-- <li>Donation: <%#= number_to_currency(((line_item.full_price.to_f)*(line_item.product.non_profit_percentage))/100) %> USD </li> -->
           </ul>
         </li>
