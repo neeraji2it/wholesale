@@ -26,49 +26,49 @@ if Category.count == 0
   SubCategory.create(:name => 'Baskets', :category_id => @cat1.id)
   @subcat1 = SubCategory.where(:name => 'Baskets').first
 
+  SubCategory.create(:name => 'Bird Baths', :category_id => @cat1.id)
+  @subcat2=SubCategory.where(:name => 'Bird Baths').first
+
+  SubCategory.create(:name => 'Bird Feeders', :category_id => @cat1.id)
+  @subcat3=SubCategory.where(:name => 'Bird Feeders').first
+
+  SubCategory.create(:name => 'Birdhouses', :category_id => @cat1.id)
+  @subcat4=SubCategory.where(:name => 'Birdhouses').first
+
+
+
   SubCategory.create(:name => 'Bookends', :category_id => @cat1.id)
-  @subcat2 = SubCategory.where(:name => 'Bookends').first
-  
+  @subcat5 = SubCategory.where(:name => 'Bookends').first
+
+ 
   SubCategory.create(:name => 'Candle Holders', :category_id => @cat1.id)
-  @subcat3=SubCategory.where(:name => 'Candle Holders').first
+  @subcat6=SubCategory.where(:name => 'Candle Holders').first
 
   SubCategory.create(:name => 'Candles', :category_id => @cat1.id)
-  @subcat4=SubCategory.where(:name => 'Candles').first
+  @subcat7=SubCategory.where(:name => 'Candles').first
 
   SubCategory.create(:name => 'Chandeliers', :category_id => @cat1.id)
-  @subcat5=SubCategory.where(:name => 'Chandeliers').first
+  @subcat8=SubCategory.where(:name => 'Chandeliers').first
 
   SubCategory.create(:name => 'Clocks', :category_id => @cat1.id)
-  @subcat6=SubCategory.where(:name => 'Clocks').first
+  @subcat9=SubCategory.where(:name => 'Clocks').first
 
   SubCategory.create(:name => 'Decorative Jars', :category_id => @cat1.id)
-  @subcat7=SubCategory.where(:name => 'Decorative Jars').first
+  @subcat10=SubCategory.where(:name => 'Decorative Jars').first
 
   SubCategory.create(:name => 'Figurines', :category_id => @cat1.id)
-  @subcat8=SubCategory.where(:name => 'Figurines').first
+  @subcat11=SubCategory.where(:name => 'Figurines').first
   
   SubCategory.create(:name => 'Home Fragrances', :category_id => @cat1.id)
-  @subcat9=SubCategory.where(:name => 'Home Fragrances').first
+  @subcat12=SubCategory.where(:name => 'Home Fragrances').first
 
   SubCategory.create(:name => 'Lamps', :category_id => @cat1.id)
-  @subcat10=SubCategory.where(:name => 'Lamps').first
+  @subcat13=SubCategory.where(:name => 'Lamps').first
 
   SubCategory.create(:name => 'Lanterns', :category_id => @cat1.id)
-  @subcat11=SubCategory.where(:name => 'Lanterns').first
+  @subcat14=SubCategory.where(:name => 'Lanterns').first
 
-  SubCategory.create(:name => 'Mirrors', :category_id => @cat1.id)
-  @subcat12=SubCategory.where(:name => 'Mirrors').first
-
-  SubCategory.create(:name => 'Oil Warmers', :category_id => @cat1.id)
-  @subcat13=SubCategory.where(:name => 'Oil Warmers').first
-
-  SubCategory.create(:name => 'Picture Frames', :category_id => @cat1.id)
-  @subcat14=SubCategory.where(:name => 'Picture Frames').first
-
-
-
-
-
+ 
 
   @cat2 = Category.where(:name => "Themes").first
   #Clothing
