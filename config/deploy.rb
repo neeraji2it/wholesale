@@ -13,7 +13,7 @@ set :application, "sunshine"
 set :scm, :git
 set (:repository) { "#{gitrepo}" }
 set (:deploy_to) { "#{deploydir}" }
-set :scm_user, "shivraj"
+set :scm_user, "root"
 set :keep_releases, 2
 ssh_options[:forward_agent] = true
 default_run_options[:pty] = true
