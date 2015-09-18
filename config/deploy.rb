@@ -1,52 +1,46 @@
-# config valid only for current version of Capistrano
-lock '3.4.0'
+#deploy.rb
+set :stages, %w(production)
+set :default_stage, "production"
+require 'capistrano/ext/multistage'
+require 'bundler/capistrano'
 
-set :application, 'sunshinesoftel'
-set :repo_url, 'git@github.com:neeraji2it/wholesale.git'
+role (:web) {"#{domain}"}
+role (:app) {"#{domain}"}
+role (:db) { ["#{domain}", {:primary => true}] }
 
-# Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-
-# Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, '/var/www/my_app_name'
-
-# Default value for :scm is :git
+# Set the deploy branch to the current branch
+set :application, "sunshine"
 set :scm, :git
+set (:repository) { "#{gitrepo}" }
+set (:deploy_to) { "#{deploydir}" }
+set :scm_user, "root"
+set :keep_releases, 2
+ssh_options[:forward_agent] = true
+default_run_options[:pty] = true
 
-# Default value for :format is :pretty
-set :format, :pretty
+desc "Symlinks database.yml, mailer.yml file from shared directory into the latest release"
+task :symlink_shared, :roles => [:app, :db] do
+  run "ln -s #{shared_path}/config/database.yml #{latest_release}/config/database.yml"
+  run "ln -s #{shared_path}/system #{latest_release}/system"
+end
 
-# Default value for :log_level is :debug
-set :log_level, :debug
-
-# Default value for :pty is false
-set :pty, true
-
-# Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('config/database.yml')
-
-# Default value for linked_dirs is []
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
-
-# Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
-
-# Default value for keep_releases is 5
-set :keep_releases, 5
+after 'deploy:finalize_update', 'deploy:cleanup', :symlink_shared
 
 namespace :deploy do
+  desc "Reload the database with seed data"
+  task :seed do
+    run "cd #{current_path}; bundle exec rake db:seed RAILS_ENV=#{rails_env}"
+  end
+end
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
-      within release_path do
-        execute :rake, 'cache:clear'
-        execute 'touch /var/www/sunshiestorefl.com/public_html/current/tmp/restart.txt'
-      end
-    end
+namespace :deploy do
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
   end
 
+  [:start, :stop].each do |t|
+    desc "#{t} task is a no-op with mod_rails"
+    task t, :roles => :app do ; end
+  end
 end
